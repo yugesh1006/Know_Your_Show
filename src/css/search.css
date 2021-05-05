@@ -1,0 +1,3 @@
+#root > div.app > div > div > div:nth-child(1) > div > label {
+  color: white;
+}

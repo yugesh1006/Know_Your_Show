@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
+
+.header {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  padding-bottom: 15px;
+  padding-top: 5px;
+  z-index: 999;
+  box-shadow: 0px 5px 10px rgb(117, 117, 117);
+  font-family: "Merriweather", serif;
+}
+@media only screen and (max-width: 600px) {
+  .header {
+    font-size: 1rem;
+    padding-bottom: 10px;
+  }
+}

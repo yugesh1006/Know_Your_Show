@@ -1,0 +1,17 @@
+@media only screen and (max-width: 600px) {
+  .pagination {
+    width: 100%;
+    border-radius: 10px;
+    height: 100px;
+    padding-top: 5px;
+  }
+}
+@media (min-width: 650px) {
+  .pagination {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    border-radius: 10px;
+    height: 100px;
+  }
+}
