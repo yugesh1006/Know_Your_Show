@@ -1,5 +1,9 @@
-##REACT APP ##
-1.Its a basic app using a thrid party api (MovieDB).
-2.Just to know the way u deal with api.
-3.Material Ui, and CustomHooks are the know Ui and hooks to get me through the project.
-4.Axios has been used to Request the data from Api.
+# Know_Your_Show
+##To find the latest movies and tv series
+
+Know your show is app an react app build using MovieDB api ,MaterialUI for the UI ,Axios for the HTTP requests from the MovieDb 
+
+## Features
+
+- Individuall Pagefor the each of the media type such as Movies and Tv series has been create to easy acess
+- The everydetail of trending movies and series are availble 
