@@ -15,10 +15,10 @@ function App() {
         <div className="app">
           <Container>
             <Switch>
-              <Route path="/" exact component={Trending}/>
               <Route path="/movies" component={Movies}/>
               <Route path="/tv_series" component={TvSeries}/>
               <Route path="/search" component={Search}/>
+              <Route path="/" exact component={Trending}/>
             </Switch>
           </Container>
         </div>

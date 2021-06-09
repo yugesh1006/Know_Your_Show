@@ -22,7 +22,7 @@ const Paginations = ({setPage,numOfPages=10}) => {
             
           }}>
           <ThemeProvider theme={Theme}>
-            <Pagination count={numOfPages}onChange={(e)=> handlePageChange(e.target.textContent)} hideNextButton hidePrevButton color="secondary" />
+            <Pagination count={numOfPages} onChange={(e)=> handlePageChange(e.target.textContent)} hideNextButton hidePrevButton color="secondary" />
           </ThemeProvider>
         </div>
     )
