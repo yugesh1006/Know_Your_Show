@@ -1,6 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import { Button, createMuiTheme, TextField, ThemeProvider } from '@material-ui/core';
-import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
+import { createMuiTheme, TextField, ThemeProvider } from '@material-ui/core';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import axios from 'axios';
@@ -27,16 +26,14 @@ const Search = () => {
     const fetchSearch = async () => {
         try {
           const { data } = await axios.get(
-            `https://api.themoviedb.org/3/search/${type ? "tv" : "movie"}?api_key=${
-              process.env.REACT_APP_API_KEY
-            }&language=en-US&query=${searchText}&page=${page}&include_adult=false`
+            `https://api.themoviedb.org/3/search/${type ? "tv" : "movie"}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&query=${searchText}&page=${page}`
           );
           setContent(data.results);
           setNumOfPages(data.total_pages);
           
         } catch (error) {
           console.error(error);
-        }
+        } 
       };
     
       useEffect(() => {
@@ -54,23 +51,20 @@ const Search = () => {
                     className="searchbox"
                     label="search"
                     variant="filled"
-                    onChange={(e) => setSearchText(e.target.value)}
+                    onChange={(e) => fetchSearch(setSearchText(e.target.value))}
                 />
-                <Button variant="contained" style={{marginLeft:10,backgroundColor:"transparent",boxShadow:"none"}} onClick={fetchSearch}>
-                    <SearchOutlinedIcon/>
-                </Button>
             </div>
             <Tabs
                 value={type}
-                indicatorColor="secondary"
+                indicatorColor="primary"
                 textColor="secondary"
                 variant="fullWidth"
                 onChange={(event, newValue)=>{
                     setType(newValue);
                     setPage(1);
                 }}>
-                 <Tab style={{width: "50%",color:"#000",fontWeight:"bold"}} label="Movies"/>
-                 <Tab style={{width : "50%",color:"#000",fontWeight:"bold"}} label="Tv Series"/>
+                <Tab style={{width: "50%",color:"#000",fontWeight:"bold"}} label="Movies"/>
+                <Tab style={{width : "50%",color:"#000",fontWeight:"bold"}} label="Tv Series"/>
             </Tabs>     
         </ThemeProvider>
         <div className="movies">
@@ -87,7 +81,7 @@ const Search = () => {
             />
           ))}
           {
-              searchText&&!content&&(type ? <h2>No Series Found</h2> : <h2>No Movies Found</h2>)
+            searchText&&!content&&(type ? <h2>No Series Found</h2> : <h2>No Movies Found</h2>)
           }
       </div>
             {numOfPages>1&&(
