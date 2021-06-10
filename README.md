@@ -1,6 +1,6 @@
 # Know_Your_Show
 ##To find the latest movies and tv series
- #https://yugesh1006.github.io/Know_Your_Show/
+##https://yugesh1006.github.io/Know_Your_Show/
 
 Know your show is app an react app build using MovieDB api ,MaterialUI for the UI ,Axios for the HTTP requests from the MovieDb 
 
