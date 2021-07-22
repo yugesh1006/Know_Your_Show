@@ -1,7 +1,7 @@
-import React,{useEffect, useState} from 'react'
-import axios from 'axios'
+import React,{useEffect, useState} from 'react';
+import axios from 'axios';
 import Singlecard from './Singlecard/Singlecard';
-import "../../css/trending.css"
+import "../../css/trending.css";
 import Paginations from './Pagination/Paginations';
 
 const Trending = () => {

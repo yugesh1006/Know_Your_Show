@@ -29,10 +29,10 @@ export default function SimpleBottomNavigation() {
   const history = useHistory();
 
   useEffect(()=>{
-    if(value===0) history.push("/");
-      else if(value===1)history.push("/movies");
-      else if(value===2)history.push("/tv_series");
-      else if(value===3)history.push("/search");
+    if(value===0) history.push("/Know_Your_Show/");
+      else if(value===1)history.push("/Know_Your_Show/movies");
+      else if(value===2)history.push("/Know_Your_Show/tv_series");
+      else if(value===3)history.push("/Know_Your_Show/search");
   },[value,history]);
 
   return (
